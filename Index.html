@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Independent Oversight | Specialist Suicide Review Consultancy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary: #1e293b;
+            --accent: #2563eb;
+            /* Updated bg-soft to #a1e3f0 as requested */
+            --bg-soft: #a1e3f0;
+            --banner-bg: #030c2b; 
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-soft);
+            color: #334155;
+        }
+
+        .page-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .page-content.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .nav-link {
+            color: #94a3b8;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .nav-link.active {
+            color: #ffffff;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .clinical-border {
+            border-left: 4px solid #cbd5e1;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(4px);
+        }
+
+        .service-card:hover {
+            border-color: #3b82f6;
+            background: #fff;
+        }
+
+        .news-badge {
+            font-size: 0.65rem;
+            padding: 2px 8px;
+            border-radius: 99px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="fixed w-full top-0 z-50 border-b border-white/10" style="background-color: var(--banner-bg);">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Logo replaced with Base64 Placeholder -->
+                <div class="w-12 h-12 rounded flex items-center justify-center overflow-hidden">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABm0lEQVR4nO2XvUvDQBiHf0mXiqSIdXBycnBydXBycnBydXBycnBydfCfwS6C+AsIunRxdXBycnBycnBycnBycnBycnBycg88YCHkXpL7XpL7XpJ74IEHHnjggQeeI6UUC7gF8K6vA6C1/Y7mKQC8Afi0736U0sh6XwBeKqIAnmUAX6SUX9YvS9M09V/X9S7yYwB/0zS99X6u627X03Ud928D8E9KiT8pP5SmaZoK+XN+C8AvpdSV8mN9/7muf86HAdA06m8D8E9KiT9pL0ppCqW009f5KAD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wH8AQ+9vAtTzRscAAAAAElFTkSuQmCC" alt="Consultancy Logo" class="object-contain w-full h-full">
+                </div>
+                
+            </div>
+            
+            <nav class="flex space-x-6 md:space-x-8">
+                <button onclick="navigateTo('home')" class="nav-link py-2 text-sm font-medium active" id="nav-home">Home</button>
+                <button onclick="navigateTo('about')" class="nav-link py-2 text-sm font-medium" id="nav-about">About Us</button>
+                <button onclick="navigateTo('services')" class="nav-link py-2 text-sm font-medium" id="nav-services">Services</button>
+                <button onclick="navigateTo('news')" class="nav-link py-2 text-sm font-medium" id="nav-news">News</button>
+                <button onclick="navigateTo('contact')" class="nav-link py-2 text-sm font-medium" id="nav-contact">Contact Us</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-24 px-6">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- PAGE: HOME -->
+            <section id="home" class="page-content active">
+                <div class="mb-16">
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                        Independent Suicide Review & <br>Mortality Governance
+                    </h1>
+                    <p class="text-lg text-slate-800 mb-10 leading-relaxed border-l-4 border-blue-900 pl-6 italic bg-white/40 p-4 rounded-r-lg">
+                        Providing rigorous, independent analysis and thematic learning to help organisations improve safety, satisfy regulatory requirements, and ensure a compassionate response to tragedy.
+                    </p>
+                    <div class="flex gap-4">
+                        <button onclick="navigateTo('services')" class="bg-slate-900 text-white px-8 py-3 rounded font-semibold hover:bg-slate-800 transition-all shadow-md">
+                            Review Services
+                        </button>
+                        <button onclick="navigateTo('contact')" class="bg-white border border-slate-300 text-slate-700 px-8 py-3 rounded font-semibold hover:bg-slate-50 transition-all shadow-sm">
+                            Secure Consultation
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+                    <div class="p-6 bg-white/80 backdrop-blur-sm border border-slate-200 rounded shadow-sm">
+                        <h3 class="font-bold text-slate-800 mb-2">Impartiality</h3>
+                        <p class="text-slate-600 text-sm">Completely independent reviews that remove internal bias and ensure transparent findings for stakeholders.</p>
+                    </div>
+                    <div class="p-6 bg-white/80 backdrop-blur-sm border border-slate-200 rounded shadow-sm">
+                        <h3 class="font-bold text-slate-800 mb-2">Thematic Learning</h3>
+                        <p class="text-slate-600 text-sm">Identifying recurring system failures to drive meaningful organizational change beyond individual cases.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PAGE: ABOUT US -->
+            <section id="about" class="page-content">
+                <h2 class="text-3xl font-bold mb-6 text-slate-900">About the Consultancy</h2>
+                <div class="prose prose-slate max-w-none text-slate-700 space-y-4 bg-white/60 p-8 rounded-lg">
+                    <p>
+                        We specialise in conducting high-level, independent reviews into unexpected deaths and suicides within clinical and community settings. Our approach is defined by a commitment to the <strong>Duty of Candour</strong> and the pursuit of system-wide learning.
+                    </p>
+                    <p>
+                        Our lead consultants bring decades of experience from backgrounds in clinical governance, legal investigation, and mental health advocacy. We understand the complexities of multi-agency working and the sensitivities required when engaging with bereaved families.
+                    </p>
+                    <h3 class="text-xl font-semibold text-slate-800 mt-8">Our Core Principles</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Objectivity:</strong> Evidence-based analysis without institutional bias.</li>
+                        <li><strong>Compassion:</strong> Maintaining the dignity of the deceased and the perspective of the bereaved.</li>
+                        <li><strong>Clarity:</strong> Producing actionable reports that meet the highest standards of scrutiny.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- PAGE: OUR SERVICES -->
+            <section id="services" class="page-content">
+                <h2 class="text-3xl font-bold mb-8 text-slate-900">Professional Review Services</h2>
+                
+                <div class="space-y-4">
+                    <div class="service-card p-6 border border-slate-200 rounded transition-all">
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">Independent Case Reviews</h3>
+                        <p class="text-slate-600 mb-4">A thorough, end-to-end investigation into individual cases, identifying key touchpoints and potential missed opportunities for intervention.</p>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Confidential Reporting</span>
+                    </div>
+
+                    <div class="service-card p-6 border border-slate-200 rounded transition-all">
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">Thematic Suicide Audits</h3>
+                        <p class="text-slate-600 mb-4">Analyzing data across multiple incidents to identify trends, geographical clusters, or systemic weaknesses in care pathways.</p>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Statistical Analysis</span>
+                    </div>
+
+                    <div class="service-card p-6 border border-slate-200 rounded transition-all">
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">Governance & Training</h3>
+                        <p class="text-slate-600 mb-4">Assisting boards and leadership teams in strengthening mortality review processes and implementing postvention strategies.</p>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Strategic Support</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PAGE: NEWS -->
+            <section id="news" class="page-content">
+                <h2 class="text-3xl font-bold mb-4 text-slate-900">Latest Updates</h2>
+                <p class="text-slate-700 mb-10 text-sm">Stay informed with our recent clinical publications, social media updates, and professional commentary.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex gap-6 p-6 bg-white/80 border border-slate-100 rounded-lg shadow-sm">
+                        <div class="shrink-0 flex flex-col items-center">
+                            <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center font-bold text-sm">Li</div>
+                            <div class="w-px h-full bg-slate-100 my-2"></div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="news-badge bg-blue-100 text-blue-700">LinkedIn Update</span>
+                                <span class="text-xs text-slate-500">2 hours ago</span>
+                            </div>
+                            <p class="text-slate-700 text-sm leading-relaxed mb-3">
+                                We are pleased to announce our participation in the upcoming National Patient Safety Conference. Our lead consultant will be discussing the intersection of independent oversight and clinical governance. 
+                            </p>
+                            <a href="#" class="text-blue-600 text-xs font-semibold hover:underline flex items-center">View on LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 p-6 bg-white/80 border border-slate-100 rounded-lg shadow-sm">
+                        <div class="shrink-0 flex flex-col items-center">
+                            <div class="w-10 h-10 bg-slate-100 text-slate-600 rounded-full flex items-center justify-center font-bold text-sm">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10l4 4v10a2 2 0 01-2 2z"></path></svg>
+                            </div>
+                            <div class="w-px h-full bg-slate-100 my-2"></div>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="news-badge bg-slate-100 text-slate-700">New Blog Post</span>
+                                <span class="text-xs text-slate-500">Dec 20, 2025</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-1">Standardizing Mortality Reviews in Mental Health</h4>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-3 line-clamp-2">
+                                An overview of best practices for ensuring reviews are both legally robust and clinically useful for organizational learning...
+                            </p>
+                            <button onclick="navigateTo('news')" class="text-slate-900 text-xs font-bold hover:underline">Read Full Article</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PAGE: CONTACT US -->
+            <section id="contact" class="page-content">
+                <div class="max-w-2xl mx-auto bg-white p-10 rounded-lg shadow-lg border border-slate-200">
+                    <h2 class="text-2xl font-bold mb-4 text-slate-900 text-center">Contact a Consultant</h2>
+                    <p class="text-center text-slate-500 mb-8 text-sm">Communications are handled with strict confidentiality. Please provide your professional contact details.</p>
+                    
+                    <form id="contactForm" class="space-y-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Full Name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:border-blue-500 outline-none">
+                            <input type="text" placeholder="Organisation" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:border-blue-500 outline-none">
+                        </div>
+                        <input type="email" placeholder="Professional Email Address" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:border-blue-500 outline-none">
+                        <textarea rows="4" placeholder="Nature of Inquiry (Brief overview)" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:border-blue-500 outline-none"></textarea>
+                        
+                        <div class="text-[10px] text-slate-400 italic">
+                            By submitting, you acknowledge that this is for professional inquiries only. For urgent support, please contact emergency services or your local crisis team.
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-slate-900 text-white font-bold py-3 rounded hover:bg-slate-800 transition-colors">
+                            Request Secure Consultation
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-white/40 border-t border-slate-200 py-10 px-6">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-600 text-xs uppercase tracking-widest font-medium">
+            <p>&copy; 2024 Oversight Consulting Group</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-blue-600">Compliance</a>
+                <a href="#" class="hover:text-blue-600">Data Protection</a>
+                <a href="#" class="hover:text-blue-600">Secure Client Login</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function navigateTo(pageId) {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            const currentNav = document.getElementById('nav-' + pageId);
+            if(currentNav) currentNav.classList.add('active');
+
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.remove('active'));
+
+            const targetPage = document.getElementById(pageId);
+            if(targetPage) targetPage.classList.add('active');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            btn.innerText = "Processing...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerText = "Inquiry Received";
+                btn.classList.replace('bg-slate-900', 'bg-green-700');
+                e.target.reset();
+            }, 1200);
+        });
+    </script>
+</body>
+</html>
