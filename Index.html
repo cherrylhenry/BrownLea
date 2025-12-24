@@ -11,7 +11,6 @@
         :root {
             --primary: #1e293b;
             --accent: #2563eb;
-            /* Updated bg-soft to #a1e3f0 as requested */
             --bg-soft: #a1e3f0;
             --banner-bg: #030c2b; 
         }
@@ -20,6 +19,7 @@
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-soft);
             color: #334155;
+            overflow-x: hidden;
         }
 
         .page-content {
@@ -36,6 +36,7 @@
         .nav-link {
             color: #94a3b8;
             transition: color 0.3s ease;
+            position: relative;
         }
 
         .nav-link:hover {
@@ -44,7 +45,16 @@
 
         .nav-link.active {
             color: #ffffff;
-            border-bottom: 2px solid var(--accent);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent);
         }
 
         .clinical-border {
@@ -54,11 +64,14 @@
         .service-card {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(4px);
+            transition: all 0.3s ease;
         }
 
         .service-card:hover {
             border-color: #3b82f6;
             background: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
         .news-badge {
@@ -76,11 +89,13 @@
     <header class="fixed w-full top-0 z-50 border-b border-white/10" style="background-color: var(--banner-bg);">
         <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <!-- Logo replaced with Base64 Placeholder -->
-                <div class="w-12 h-12 rounded flex items-center justify-center overflow-hidden">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABm0lEQVR4nO2XvUvDQBiHf0mXiqSIdXBycnBydXBycnBydXBycnBydfCfwS6C+AsIunRxdXBycnBycnBycnBycnBycnBycg88YCHkXpL7XpL7XpJ74IEHHnjggQeeI6UUC7gF8K6vA6C1/Y7mKQC8Afi0736U0sh6XwBeKqIAnmUAX6SUX9YvS9M09V/X9S7yYwB/0zS99X6u627X03Ud928D8E9KiT8pP5SmaZoK+XN+C8AvpdSV8mN9/7muf86HAdA06m8D8E9KiT9pL0ppCqW009f5KAD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wHQr68DoF9fB0C/vg6Afn0dAP36OgD69XUA9OvrAOjX1wH8AQ+9vAtTzRscAAAAAElFTkSuQmCC" alt="Consultancy Logo" class="object-contain w-full h-full">
+                <!-- Updated Logo from GitHub -->
+                <div class="h-12 flex items-center justify-center overflow-hidden">
+                    <img src="https://raw.githubusercontent.com/Logo.JPG" 
+                         alt="Independent Oversight Logo" 
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAxMjAgNDAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIGZpbGw9IiMzMzQiLz48dGV4dCB4PSI1MCUiIHk9IjU1JSIgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TE9HTzwvdGV4dD48L3N2Zz4=';" 
+                         class="object-contain h-full max-w-[200px]">
                 </div>
-                
             </div>
             
             <nav class="flex space-x-6 md:space-x-8">
@@ -151,19 +166,19 @@
                 <h2 class="text-3xl font-bold mb-8 text-slate-900">Professional Review Services</h2>
                 
                 <div class="space-y-4">
-                    <div class="service-card p-6 border border-slate-200 rounded transition-all">
+                    <div class="service-card p-6 border border-slate-200 rounded">
                         <h3 class="text-xl font-bold mb-2 text-slate-800">Independent Case Reviews</h3>
                         <p class="text-slate-600 mb-4">A thorough, end-to-end investigation into individual cases, identifying key touchpoints and potential missed opportunities for intervention.</p>
                         <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Confidential Reporting</span>
                     </div>
 
-                    <div class="service-card p-6 border border-slate-200 rounded transition-all">
+                    <div class="service-card p-6 border border-slate-200 rounded">
                         <h3 class="text-xl font-bold mb-2 text-slate-800">Thematic Suicide Audits</h3>
                         <p class="text-slate-600 mb-4">Analyzing data across multiple incidents to identify trends, geographical clusters, or systemic weaknesses in care pathways.</p>
                         <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Statistical Analysis</span>
                     </div>
 
-                    <div class="service-card p-6 border border-slate-200 rounded transition-all">
+                    <div class="service-card p-6 border border-slate-200 rounded">
                         <h3 class="text-xl font-bold mb-2 text-slate-800">Governance & Training</h3>
                         <p class="text-slate-600 mb-4">Assisting boards and leadership teams in strengthening mortality review processes and implementing postvention strategies.</p>
                         <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Strategic Support</span>
@@ -190,7 +205,7 @@
                             <p class="text-slate-700 text-sm leading-relaxed mb-3">
                                 We are pleased to announce our participation in the upcoming National Patient Safety Conference. Our lead consultant will be discussing the intersection of independent oversight and clinical governance. 
                             </p>
-                            <a href="#" class="text-blue-600 text-xs font-semibold hover:underline flex items-center">View on LinkedIn</a>
+                            <a href="#" class="text-blue-600 text-xs font-semibold hover:underline">View on LinkedIn</a>
                         </div>
                     </div>
 
@@ -224,17 +239,17 @@
                     
                     <form id="contactForm" class="space-y-5">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" placeholder="Full Name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:border-blue-500 outline-none">
-                            <input type="text" placeholder="Organisation" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:border-blue-500 outline-none">
+                            <input type="text" placeholder="Full Name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                            <input type="text" placeholder="Organisation" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all">
                         </div>
-                        <input type="email" placeholder="Professional Email Address" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:border-blue-500 outline-none">
-                        <textarea rows="4" placeholder="Nature of Inquiry (Brief overview)" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:border-blue-500 outline-none"></textarea>
+                        <input type="email" placeholder="Professional Email Address" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                        <textarea rows="4" placeholder="Nature of Inquiry (Brief overview)" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded text-sm focus:ring-2 focus:ring-blue-500 outline-none transition-all"></textarea>
                         
                         <div class="text-[10px] text-slate-400 italic">
                             By submitting, you acknowledge that this is for professional inquiries only. For urgent support, please contact emergency services or your local crisis team.
                         </div>
                         
-                        <button type="submit" class="w-full bg-slate-900 text-white font-bold py-3 rounded hover:bg-slate-800 transition-colors">
+                        <button type="submit" class="w-full bg-slate-900 text-white font-bold py-3 rounded hover:bg-slate-800 transition-colors shadow-lg active:transform active:scale-[0.98]">
                             Request Secure Consultation
                         </button>
                     </form>
@@ -244,13 +259,13 @@
         </div>
     </main>
 
-    <footer class="bg-white/40 border-t border-slate-200 py-10 px-6">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-600 text-xs uppercase tracking-widest font-medium">
+    <footer class="bg-white/40 border-t border-slate-200 py-10 px-6 mt-auto">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-600 text-xs uppercase tracking-widest font-medium text-center md:text-left">
             <p>&copy; 2024 Oversight Consulting Group</p>
             <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="#" class="hover:text-blue-600">Compliance</a>
-                <a href="#" class="hover:text-blue-600">Data Protection</a>
-                <a href="#" class="hover:text-blue-600">Secure Client Login</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">Compliance</a>
+                <a href="#" class="hover:text-blue-600 transition-colors">Data Protection</a>
+                <a href="#" class="hover:text-blue-600 transition-colors border-l pl-6 border-slate-300">Secure Client Login</a>
             </div>
         </div>
     </footer>
@@ -274,14 +289,20 @@
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = e.target.querySelector('button');
-            btn.innerText = "Processing...";
+            const originalText = btn.innerText;
+            btn.innerText = "Processing Securely...";
             btn.disabled = true;
 
             setTimeout(() => {
                 btn.innerText = "Inquiry Received";
                 btn.classList.replace('bg-slate-900', 'bg-green-700');
                 e.target.reset();
-            }, 1200);
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('bg-green-700', 'bg-slate-900');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
         });
     </script>
 </body>
