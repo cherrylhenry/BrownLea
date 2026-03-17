@@ -221,21 +221,45 @@
 
             <!-- PAGE: ABOUT US -->
             <section id="about" class="page-content">
-                <div class="mb-8">
+                <div class="mb-8 text-center md:text-left">
                     <h2 class="text-3xl font-bold text-slate-900 mb-2">Our Mission & Commitment</h2>
-                    <div class="h-1 w-20 bg-slate-900 rounded"></div>
+                    <div class="h-1 w-20 bg-slate-900 rounded mx-auto md:mx-0"></div>
                 </div>
-                <div class="bg-white/60 p-6 md:p-12 rounded-2xl shadow-sm border border-white/40 space-y-10">
-                    <div class="relative pl-8 border-l-4 border-slate-900">
-                        <p class="text-2xl md:text-3xl font-bold text-slate-900 leading-tight mb-4">
-                            "At Brown Lea, we believe that one domestic homicide is one too many."
-                        </p>
-                        <p class="text-lg text-slate-800 leading-relaxed italic">
-                            This informs how we support practice—making sure it prevents domestic homicide by promoting effective and responsive safeguarding.
-                        </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                    <!-- Text Content -->
+                    <div class="md:col-span-7 space-y-6">
+                        <div class="bg-white/60 p-6 md:p-8 rounded-2xl shadow-sm border border-white/40">
+                            <div class="relative pl-6 border-l-4 border-slate-900 mb-6">
+                                <p class="text-xl md:text-2xl font-bold text-slate-900 leading-tight">
+                                    "At Brown Lea, we believe that one domestic homicide is one too many."
+                                </p>
+                            </div>
+                            <div class="prose prose-slate max-w-none text-slate-700 space-y-4">
+                                <p class="italic text-lg text-slate-800">
+                                    This informs how we support practice—making sure it prevents domestic homicide by promoting effective and responsive safeguarding.
+                                </p>
+                                <p>
+                                    Brown Lea and Associates provides <strong>independent expertise for complex safeguarding cases</strong>. We distill complex information into concise insights that empower practitioners and leaders to make meaningful changes.
+                                </p>
+                                <p>
+                                    Our approach is rooted in compassion, objectivity, and a relentless pursuit of learning that leads to safer communities.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="prose prose-slate max-w-none text-slate-700 space-y-6">
-                        <p>Brown Lea and Associates provides <strong>independent expertise for complex safeguarding cases</strong>. We distill complex information into concise insights that empower practitioners.</p>
+
+                    <!-- Image Content -->
+                    <div class="md:col-span-5">
+                        <div class="profile-container">
+                            <img src="Headshot.png" 
+                                 alt="Cherryl Henry-Leach - Specialist Consultant" 
+                                 class="w-full h-auto rounded-2xl shadow-lg border-4 border-white object-cover aspect-[3/4]">
+                            <div class="mt-4 text-center md:text-left bg-white/40 p-3 rounded-lg backdrop-blur-sm border border-white/20">
+                                <p class="font-bold text-slate-900">Cherryl Henry-Leach</p>
+                                <p class="text-xs uppercase tracking-widest text-slate-600 font-semibold">Specialist Consultant</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
