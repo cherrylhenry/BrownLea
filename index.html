@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta name="description" content="Independent safeguarding and domestic abuse consultancy. Expert analysis, statutory reviews, training, and organisational support to improve safety and outcomes for families and communities."> 
+<meta name="keywords" content="safeguarding, domestic abuse, consultancy, statutory reviews, training, organisational support, risk assessment"> 
+<meta name="author" content="Brown Lea and Associates"> 
+<meta property="og:title" content="Brown Lea and Associates – Safeguarding & Domestic Abuse Consultancy"> 
+<meta property="og:description" content="Independent safeguarding and domestic abuse consultancy. Specialist leadership, statutory reviews, assessments, training, and organisational improvement."> 
+<meta property="og:image" content="https://Brownlea-associates.co.uk/Alt_banner.png"> 
+<meta property="og:type" content="website"> 
+<meta property="og:url" content="https://Brownlea-associates.co.uk"> 
+<meta name="twitter:card" content="summary_large_image"> 
+<meta name="twitter:title" content="Brown Lea and Associates – Safeguarding & Domestic Abuse Consultancy"> 
+<meta name="twitter:description" content="Specialist consultancy supporting organisations to strengthen safeguarding, reduce risk, and improve outcomes."> 
+<meta name="twitter:image" content="https://Brownlea-associates.co.uk/Alt_banner.png"> 
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brown Lea and Associates | Specialist Safeguarding & Domestic Abuse Consultancy</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Brown Lea and Associates",
+  "url": "https://brownlea-associates.co.uk",
+  "logo": "https://brownlea-associates.co.uk/logo.png",
+  "description": "Independent safeguarding and domestic abuse consultancy offering statutory reviews, assessments, training, and organisational improvement.",
+  "areaServed": "GB",
+  "sameAs": [
+    "https://www.linkedin.com/in/cherryl-henry-leach-a0a78948"
+  ]
+}
+</script>
+    <link rel="canonical" href="https://brownlea-associates.co.uk"> 
+    <title>Brown Lea and Associates | Specialist Safeguarding & Domestic Abuse Consultancy</title> 
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <script src="https://unpkg.com/lucide@latest"></script> 
     <style>
+    :root {
+        --header-height: 104px; /* Adjust if you change the header size later */
+    }
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;700&display=swap');
 
         :root {
@@ -196,31 +226,81 @@
         </div>
     </header>
 
-    <main class="pt-48 md:pt-56 pb-24 px-6 flex-grow">
+<main style="padding-top: var(--header-height);" class="pb-24 px-6 flex-grow">
         <div class="max-w-4xl mx-auto">
 
             <!-- PAGE: HOME -->
-            <section id="home" class="page-content active">
-                <div class="mb-16 text-center">
-                    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                        Safeguarding and Domestic Abuse Consultancy Services
-                    </h1>
-                    <p class="text-lg text-slate-800 mb-10 leading-relaxed border-l-4 border-blue-900 pl-6 italic bg-white/40 p-4 rounded-r-lg inline-block text-left">
-                        Providing rigorous, independent analysis and thematic learning to help organisations improve safety, satisfy regulatory requirements, and ensure a compassionate response to tragedy.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button onclick="navigateTo('services')" class="bg-slate-900 text-white px-8 py-3 rounded font-semibold hover:bg-slate-800 transition-all shadow-md">
-                            Review Services
-                        </button>
-                        <button onclick="navigateTo('contact')" class="bg-white border border-slate-300 text-slate-700 px-8 py-3 rounded font-semibold hover:bg-slate-50 transition-all shadow-sm">
-                            Secure Consultation
-                        </button>
-                    </div>
-                </div>
-            </section>
+<section id="home" class="page-content active">
+
+    <!-- HERO BANNER WRAPPER -->
+    <div class="relative w-full overflow-hidden">
+
+        <!-- ✅ RESPONSIVE HERO IMAGE (object-cover allows natural height + safe side cropping) -->
+        <img src="Alt_banner.png" 
+             alt="Hero banner"
+             class="w-full h-64 sm:h-72 md:h-96 lg:h-[28rem] object-cover">
+
+        <!-- BRAND OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-b 
+                    from-[#040c2d]/80 via-[#040c2d]/60 to-[#040c2d]/40">
+        </div>
+
+        <!-- HERO TEXT -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center 
+                    text-center px-6 py-8 md:py-12">
+
+            <!-- ✅ REDUCED MOBILE TEXT SIZES + FROSTED GLASS PANEL -->
+            <div class="backdrop-blur-md bg-white/20 border border-white/20 
+                        rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl max-w-3xl">
+
+                <h1 class="text-white text-2xl sm:text-3xl md:text-5xl 
+                           font-bold leading-tight drop-shadow-lg">
+                    Safeguarding and Domestic Abuse Consultancy Services
+                </h1>
+
+                <p class="mt-4 text-white/90 text-sm sm:text-base md:text-lg 
+                          leading-relaxed drop-shadow max-w-2xl mx-auto">
+                    Providing rigorous, independent analysis and thematic learning to help organisations improve 
+                    safety, satisfy regulatory requirements, and ensure a compassionate response to tragedy.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PAGE BODY CONTENT BELOW THE HERO -->
+    <div class="max-w-4xl mx-auto mt-12 text-center">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <button onclick="navigateTo('about')" 
+                    class="bg-slate-900 text-white px-8 py-3 rounded font-semibold hover:bg-slate-800 shadow-md">
+                More About Us
+            </button>
+
+            <button onclick="navigateTo('services')" 
+                    class="bg-slate-900 text-white px-8 py-3 rounded font-semibold hover:bg-slate-800 shadow-md">
+                Review Services
+            </button>
+
+            <button onclick="navigateTo('news')" 
+                    class="bg-slate-900 text-white px-8 py-3 rounded font-semibold hover:bg-slate-800 shadow-md">
+                Stay Up To Date
+            </button>
+
+            <button onclick="navigateTo('contact')" 
+                    class="bg-white border border-slate-300 text-slate-700 px-8 py-3 rounded font-semibold hover:bg-slate-50 shadow-sm">
+                Get More Information
+            </button>
+
+        </div>
+    </div>
+
+</section>
 
             <!-- PAGE: ABOUT US -->
-            <section id="about" class="page-content">
+            <section id="about" class="page-content pt-6">
                 <div class="mb-8 text-center md:text-left">
                     <h2 class="text-3xl font-bold text-slate-900 mb-2">Our Mission & Commitment</h2>
                     <div class="h-1 w-20 bg-slate-900 rounded mx-auto md:mx-0"></div>
@@ -232,18 +312,20 @@
                         <div class="bg-white/60 p-6 md:p-8 rounded-2xl shadow-sm border border-white/40">
                             <div class="relative pl-6 border-l-4 border-slate-900 mb-6">
                                 <p class="text-xl md:text-2xl font-bold text-slate-900 leading-tight">
-                                    "At Brown Lea, we believe that one domestic homicide is one too many."
+                                    "At Brown Lea, we believe that one death at the hands of an abuser is one too many."
                                 </p>
                             </div>
                             <div class="prose prose-slate max-w-none text-slate-700 space-y-4">
                                 <p class="italic text-lg text-slate-800">
-                                    This informs how we support practice—making sure it prevents domestic homicide by promoting effective and responsive safeguarding.
+                                    This informs how we support practice—making sure it prevents domestic homicide by promoting effective and responsive safeguarding. 
+                                    <br>
+                                    We also make sure the voices of the victim and their children are heard so that it informs safeguarding.
                                 </p>
                                 <p>
                                     Brown Lea and Associates provides <strong>independent expertise for complex safeguarding cases</strong>. We distill complex information into concise insights that empower practitioners and leaders to make meaningful changes.
                                 </p>
                                 <p>
-                                    Our approach is rooted in compassion, objectivity, and a relentless pursuit of learning that leads to safer communities.
+                                    Our approach is rooted in compassion, objectivity, and a relentless pursuit of learning, leading to safer communities.
                                 </p>
                             </div>
                         </div>
@@ -265,7 +347,7 @@
             </section>
 
             <!-- PAGE: OUR SERVICES -->
-            <section id="services" class="page-content">
+            <section id="services" class="page-content pt-6">
                 <h2 class="text-3xl font-bold mb-2 text-slate-900">Specialist Services</h2>
                 <p class="text-slate-700 mb-8 text-sm"></p>
                 
@@ -321,7 +403,7 @@
             </section>
 
             <!-- PAGE: NEWS -->
-            <section id="news" class="page-content">
+            <section id="news" class="page-content pt-6">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
                     <div>
                         <h2 class="text-3xl font-bold text-slate-900">Latest Updates</h2>
@@ -338,17 +420,51 @@
             </section>
 
             <!-- PAGE: CONTACT US -->
-            <section id="contact" class="page-content">
-                <div class="max-w-xl mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg border border-slate-200">
-                    <h2 class="text-2xl font-bold mb-4 text-slate-900 text-center">Contact a Consultant</h2>
-                    <form id="contactForm" class="space-y-4">
-                        <input type="text" placeholder="Full Name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500">
-                        <input type="email" placeholder="Professional Email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500">
-                        <textarea rows="4" placeholder="Nature of Inquiry" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                        <button type="submit" class="w-full bg-slate-900 text-white font-bold py-3 rounded-lg hover:bg-slate-800 transition-colors">Request Consultation</button>
-                    </form>
-                </div>
-            </section>
+<section id="contact" class="page-content pt-6">
+    <div class="max-w-xl mx-auto bg-white p-6 md:p-8 rounded-xl shadow-lg border border-slate-200">
+
+        <h2 class="text-2xl font-bold mb-4 text-slate-900 text-center">Contact a Consultant</h2>
+
+        <!-- ✅ SUCCESS BANNER -->
+        <div id="successBanner" 
+            class="hidden mb-4 p-4 rounded-lg bg-green-500 text-white font-semibold text-center 
+                   opacity-0 transition-opacity duration-500">
+            ✅ Your message has been sent successfully.
+        </div>
+
+        <!-- ✅ ✅ CORRECTED: REAL FORM TAG -->
+        <form id="contactForm" action="https://formspree.io/f/xvzvgprb" method="POST" class="space-y-4">
+
+            <input name="name" type="text" placeholder="Name or Organisation" required
+                class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg
+                       outline-none focus:ring-2 focus:ring-blue-500">
+
+            <!-- ✅ EMAIL INPUTS -->
+            <input id="email" name="email" type="email" placeholder="Contact email address" required
+                class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg
+                       outline-none focus:ring-2 focus:ring-blue-500">
+
+            <input id="confirmEmail" type="email" placeholder="Confirm email address" required
+                class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg
+                       outline-none focus:ring-2 focus:ring-blue-500">
+
+            <p id="emailError" class="text-red-600 text-sm hidden">
+                Email addresses do not match.
+            </p>
+
+            <textarea name="message" rows="4" placeholder="Message" required
+                class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg
+                       outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+            <button type="submit"
+                class="w-full bg-slate-900 text-white font-bold py-3 rounded-lg
+                       hover:bg-slate-800 transition-colors">
+                Send Enquiry
+            </button>
+
+        </form>
+    </div>
+</section>
         </div>
     </main>
 
@@ -418,7 +534,7 @@
                 title: "Training",
                 icon: "graduation-cap",
                 color: "bg-emerald-50 text-emerald-600",
-                content: `<p>"Our bespoke training empowers practitioners to identify and respond to abuse with sensitivity and confidence. We bridge the gap between awareness and practical skill, ensuring professionals can elicit engagement from survivors while maintaining safe boundaries.<br><br>
+                content: `<p>Our bespoke training empowers practitioners to identify and respond to abuse with sensitivity and confidence. We bridge the gap between awareness and practical skill, ensuring professionals can elicit engagement from survivors while maintaining safe boundaries.<br><br>
                 
                 <strong>Our training and workshops include:</strong>
 </p>
@@ -469,20 +585,36 @@
 
         const RSS_FEED_URL = 'https://medium.com/feed/@google'; 
 
+const pageTitles = {
+    home: "Home | Brown Lea and Associates",
+    about: "About Us | Brown Lea and Associates",
+    services: "Services | Brown Lea and Associates",
+    news: "Latest News | Brown Lea and Associates",
+    contact: "Contact Us | Brown Lea and Associates"
+};
+
         // NAVIGATION
-        function navigateTo(pageId, addToHistory = true) {
-            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
-            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-            const target = document.getElementById(pageId);
-            if (target) {
-                target.classList.add('active');
-                const nav = document.getElementById('nav-' + pageId);
-                if (nav) nav.classList.add('active');
-                if (addToHistory) history.pushState({ pageId: pageId }, "", "#" + pageId);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                if (pageId === 'news') fetchNews();
-            }
-        }
+function navigateTo(pageId, addToHistory = true) {
+    document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+
+    const target = document.getElementById(pageId);
+    if (target) {
+        target.classList.add('active');
+        const nav = document.getElementById('nav-' + pageId);
+        if (nav) nav.classList.add('active');
+
+        //-- Set dynamic title
+        document.title = pageTitles[pageId] || "Brown Lea and Associates";
+
+        //-- Update history
+        if (addToHistory) history.pushState({ pageId: pageId }, "", "#" + pageId);
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        if (pageId === 'news') fetchNews();
+    }
+}
 
         function toggleMobileMenu() {
             const m = document.getElementById('mobile-menu');
@@ -585,15 +717,83 @@
             navigateTo(hash, false);
             lucide.createIcons();
         };
+// EMAIL MATCH VALIDATION
+const email = document.getElementById('email');
+const confirmEmail = document.getElementById('confirmEmail');
+const emailError = document.getElementById('emailError');
 
-        document.getElementById('contactForm').onsubmit = (e) => {
-            e.preventDefault();
-            const b = e.target.querySelector('button');
-            b.innerText = "Sent Successfully";
-            setTimeout(() => { b.innerText = "Request Consultation"; e.target.reset(); }, 2000);
-        };
+function validateEmails() {
+    if (email.value && confirmEmail.value) {
+        if (email.value !== confirmEmail.value) {
+            emailError.classList.remove('hidden');
+            email.classList.add('border-red-500');
+            confirmEmail.classList.add('border-red-500');
+            return false;
+        } else {
+            emailError.classList.add('hidden');
+            email.classList.remove('border-red-500');
+            confirmEmail.classList.remove('border-red-500');
+            return true;
+        }
+    }
+    return true;
+}
+
+email.addEventListener('blur', validateEmails);
+confirmEmail.addEventListener('blur', validateEmails);
+// ✅ FORMSPREE‑COMPATIBLE SUBMIT HANDLER
+const form = document.getElementById('contactForm');
+const banner = document.getElementById('successBanner');
+
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Stop if emails don't match
+    if (!validateEmails()) {
+        return;
+    }
+
+    const data = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+        if (response.ok) {
+
+            // ✅ Show success banner
+            banner.classList.remove('hidden');
+            setTimeout(() => banner.classList.add('opacity-100'), 20);
+
+            form.reset();
+
+            // ✅ Fade out banner after delay
+            setTimeout(() => {
+                banner.classList.remove('opacity-100');
+                setTimeout(() => banner.classList.add('hidden'), 500);
+            }, 2500);
+
+        } else {
+            alert("Oops! There was a problem submitting your form.");
+        }
+    })
+    .catch(() => {
+        alert("Oops! There was a problem submitting your form.");
+    });
+}); 
 
         window.onkeydown = (e) => { if(e.key === 'Escape') closeLightbox(); };
     </script>
+    
+<script>
+    window.addEventListener('load', () => {
+        const header = document.querySelector('header');
+        const main = document.querySelector('main');
+        main.style.paddingTop = header.offsetHeight + 'px';
+    });
+</script>
+
 </body>
 </html>
